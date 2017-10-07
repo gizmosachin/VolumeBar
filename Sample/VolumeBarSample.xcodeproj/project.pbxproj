@@ -7,14 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03272F5B2016F9AA006B61A2 /* VolumeBarAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03272F5A2016F9AA006B61A2 /* VolumeBarAnimation.swift */; };
+		03272F5F20170C6E006B61A2 /* VolumeBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03272F5E20170C6E006B61A2 /* VolumeBarViewController.swift */; };
+		0354839A1F99BDDE0053E33D /* SystemVolumeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035483981F99BDDE0053E33D /* SystemVolumeManager.swift */; };
+		0354839E1F99BE1A0053E33D /* VolumeBarStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0354839D1F99BE1A0053E33D /* VolumeBarStackView.swift */; };
+		035483A01F99C2750053E33D /* VolumeBarWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0354839F1F99C2750053E33D /* VolumeBarWindow.swift */; };
 		03F7392A1C8C248000A12BAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F739281C8C248000A12BAA /* AppDelegate.swift */; };
 		03F7392B1C8C248000A12BAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F739291C8C248000A12BAA /* ViewController.swift */; };
 		03F7392D1C8C248700A12BAA /* VolumeBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F7392C1C8C248700A12BAA /* VolumeBar.swift */; };
 		03F7392F1C8C249700A12BAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03F7392E1C8C249700A12BAA /* Assets.xcassets */; };
 		03F739321C8C249E00A12BAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03F739301C8C249E00A12BAA /* LaunchScreen.storyboard */; };
+		03FDC89A203E91DC009AEBEF /* VolumeBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FDC899203E91DC009AEBEF /* VolumeBarStyle.swift */; };
+		03FDC89C203EA4CA009AEBEF /* VolumeBarPresetStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FDC89B203EA4CA009AEBEF /* VolumeBarPresetStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03272F5A2016F9AA006B61A2 /* VolumeBarAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VolumeBarAnimation.swift; path = ../Sources/VolumeBarAnimation.swift; sourceTree = "<group>"; };
+		03272F5E20170C6E006B61A2 /* VolumeBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeBarViewController.swift; sourceTree = "<group>"; };
+		035483981F99BDDE0053E33D /* SystemVolumeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SystemVolumeManager.swift; path = ../Sources/SystemVolumeManager.swift; sourceTree = "<group>"; };
+		0354839D1F99BE1A0053E33D /* VolumeBarStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeBarStackView.swift; sourceTree = "<group>"; };
+		0354839F1F99C2750053E33D /* VolumeBarWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeBarWindow.swift; sourceTree = "<group>"; };
 		03D35F3C1C8A2FD30053F91E /* VolumeBarSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VolumeBarSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03D35F4B1C8A2FD40053F91E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = VolumeBarSample/Info.plist; sourceTree = "<group>"; };
 		03F739281C8C248000A12BAA /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = VolumeBarSample/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
@@ -22,6 +34,8 @@
 		03F7392C1C8C248700A12BAA /* VolumeBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VolumeBar.swift; path = ../Sources/VolumeBar.swift; sourceTree = "<group>"; };
 		03F7392E1C8C249700A12BAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = VolumeBarSample/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		03F739311C8C249E00A12BAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = VolumeBarSample/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
+		03FDC899203E91DC009AEBEF /* VolumeBarStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeBarStyle.swift; sourceTree = SOURCE_ROOT; };
+		03FDC89B203EA4CA009AEBEF /* VolumeBarPresetStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeBarPresetStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +53,13 @@
 			isa = PBXGroup;
 			children = (
 				03F7392C1C8C248700A12BAA /* VolumeBar.swift */,
+				0354839F1F99C2750053E33D /* VolumeBarWindow.swift */,
+				03272F5E20170C6E006B61A2 /* VolumeBarViewController.swift */,
+				0354839D1F99BE1A0053E33D /* VolumeBarStackView.swift */,
+				03272F5A2016F9AA006B61A2 /* VolumeBarAnimation.swift */,
+				03FDC899203E91DC009AEBEF /* VolumeBarStyle.swift */,
+				03FDC89B203EA4CA009AEBEF /* VolumeBarPresetStyle.swift */,
+				035483981F99BDDE0053E33D /* SystemVolumeManager.swift */,
 				03D35F3E1C8A2FD40053F91E /* VolumeBarSample */,
 				03D35F3D1C8A2FD30053F91E /* Products */,
 			);
@@ -92,11 +113,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "Sachin Patel";
 				TargetAttributes = {
 					03D35F3B1C8A2FD30053F91E = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 9BZNV2TE99;
 						LastSwiftMigration = 0900;
 					};
 				};
@@ -136,9 +158,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03FDC89C203EA4CA009AEBEF /* VolumeBarPresetStyle.swift in Sources */,
 				03F7392B1C8C248000A12BAA /* ViewController.swift in Sources */,
+				03272F5B2016F9AA006B61A2 /* VolumeBarAnimation.swift in Sources */,
+				03FDC89A203E91DC009AEBEF /* VolumeBarStyle.swift in Sources */,
+				035483A01F99C2750053E33D /* VolumeBarWindow.swift in Sources */,
+				0354839A1F99BDDE0053E33D /* SystemVolumeManager.swift in Sources */,
+				03272F5F20170C6E006B61A2 /* VolumeBarViewController.swift in Sources */,
 				03F7392A1C8C248000A12BAA /* AppDelegate.swift in Sources */,
 				03F7392D1C8C248700A12BAA /* VolumeBar.swift in Sources */,
+				0354839E1F99BE1A0053E33D /* VolumeBarStackView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,13 +194,21 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -198,6 +235,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 			};
 			name = Debug;
 		};
@@ -210,13 +248,21 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -235,6 +281,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -245,14 +292,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 9BZNV2TE99;
 				INFOPLIST_FILE = VolumeBarSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SachinPatel.VolumeBar;
 				PRODUCT_NAME = VolumeBarSample;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -262,14 +311,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				DEVELOPMENT_TEAM = 9BZNV2TE99;
 				INFOPLIST_FILE = VolumeBarSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SachinPatel.VolumeBar;
 				PRODUCT_NAME = VolumeBarSample;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
