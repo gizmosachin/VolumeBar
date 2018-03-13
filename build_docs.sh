@@ -13,10 +13,7 @@ jazzy \
   --github_url 'https://github.com/gizmosachin/VolumeBar' \
   --root-url 'https://gizmosachin.github.io/VolumeBar/docs' \
   --xcodebuild-arguments -scheme,VolumeBar \
-  --copyright '© 2017 [Sachin Patel](http://gizmosachin.com).' \
-
-# Jazzy generates a top-level index.html file, delete it
-rm index.html
+  --copyright '© 2018 [Sachin Patel](http://gizmosachin.com).' \
 
 # Open docs in browser
 open ./docs/index.html

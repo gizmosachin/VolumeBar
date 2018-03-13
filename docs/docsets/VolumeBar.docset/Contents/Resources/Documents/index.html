@@ -34,16 +34,16 @@
               <li class="nav-group-task">
                 <a href="Classes/VolumeBar.html">VolumeBar</a>
               </li>
-              <li class="nav-group-task">
-                <a href="Classes/VolumeBar/AnimationStyle.html">– AnimationStyle</a>
-              </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Protocols.html">Protocols</a>
+            <a href="Structs.html">Structs</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Protocols/VolumeDelegate.html">VolumeDelegate</a>
+                <a href="Structs/VolumeBarAnimation.html">VolumeBarAnimation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/VolumeBarStyle.html">VolumeBarStyle</a>
               </li>
             </ul>
           </li>
@@ -56,135 +56,96 @@
             <p><img src="https://github.com/gizmosachin/VolumeBar/raw/master/VolumeBar.gif" alt="VolumeBar"></p>
 <h2 id='volumebar' class='heading'>VolumeBar</h2>
 
-<p><code>VolumeBar</code> is a <a href="https://developer.apple.com/swift/">Swift</a> volume indicator that doesn&rsquo;t obstruct content on screen. A basic implementation is just one line of code, but it can be heavily customized via several appearance and presentation properties.</p>
-<h3 id='features' class='heading'>Features</h3>
+<p>VolumeBar is a <a href="https://developer.apple.com/swift/">Swift</a> volume indicator that doesn&rsquo;t obstruct content on screen.</p>
 
-<ul>
-<li>[x] Customizable appearance</li>
-<li>[x] Orientation change support</li>
-<li>[x] Hides system volume HUD automatically</li>
-<li>[x] Simple API</li>
-</ul>
-
-<p><a href="https://travis-ci.org/gizmosachin/VolumeBar"><img src="https://travis-ci.org/gizmosachin/VolumeBar.svg?branch=master" alt="Build Status"></a> <a href="http://cocoadocs.org/docsets/VolumeBar/"><img src="https://img.shields.io/cocoapods/v/VolumeBar.svg?style=flat" alt="Pod Version"></a></p>
-<h2 id='version-compatibility' class='heading'>Version Compatibility</h2>
-
-<p>Current Swift compatibility breakdown:</p>
+<p><a href="https://travis-ci.org/gizmosachin/VolumeBar"><img src="https://travis-ci.org/gizmosachin/VolumeBar.svg?branch=master" alt="Build Status"></a> <img src="https://img.shields.io/cocoapods/v/VolumeBar.svg" alt="Pod Version"> <a href="https://developer.apple.com/swift"><img src="https://img.shields.io/badge/language-swift%204.0-brightgreen.svg" alt="Swift Version"></a> <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-lightgrey.svg" alt="GitHub license"></a></p>
 
 <table><thead>
 <tr>
-<th>Swift Version</th>
-<th>Framework Version</th>
+<th style="text-align: center"></th>
+<th style="text-align: left">Features</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>3.0</td>
-<td>master</td>
+<td style="text-align: center">:no_good:</td>
+<td style="text-align: left">Hides system volume HUD automatically</td>
 </tr>
 <tr>
-<td>2.3</td>
-<td>1.1</td>
+<td style="text-align: center">:art:</td>
+<td style="text-align: left">Customizable appearance with presets</td>
 </tr>
 <tr>
-<td>2.2</td>
-<td>1.1</td>
+<td style="text-align: center">:boom:</td>
+<td style="text-align: left">Support for custom animations</td>
+</tr>
+<tr>
+<td style="text-align: center">:iphone:</td>
+<td style="text-align: left">Works with iPhone X</td>
+</tr>
+<tr>
+<td style="text-align: center">:books:</td>
+<td style="text-align: left">Fully <a href="http://gizmosachin.github.io/VolumeBar">documented</a></td>
+</tr>
+<tr>
+<td style="text-align: center">:baby_chick:</td>
+<td style="text-align: left"><a href="https://developer.apple.com/swift/">Swift 4</a></td>
 </tr>
 </tbody></table>
 <h2 id='usage' class='heading'>Usage</h2>
 
-<p>A basic implementation of <code>VolumeBar</code> is just one line of code.</p>
-<pre class="highlight swift"><code><span class="kt">VolumeBar</span><span class="o">.</span><span class="n">sharedInstance</span><span class="o">.</span><span class="nf">start</span><span class="p">()</span>
+<p>It&rsquo;s super easy to add VolumeBar to your app:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">volumeBar</span> <span class="o">=</span> <span class="kt">VolumeBar</span><span class="o">.</span><span class="n">shared</span>
+<span class="n">volumeBar</span><span class="o">.</span><span class="n">style</span> <span class="o">=</span> <span class="o">.</span><span class="n">likeInstagram</span>
+<span class="n">volumeBar</span><span class="o">.</span><span class="nf">start</span><span class="p">()</span>
 </code></pre>
 
-<p>By default, adding <code>VolumeBar</code> to your app will cause background audio to pause when your app is opened. To prevent this, add the following line of code wherever you call the <code>start</code> method:</p>
+<p>Customize appearance attributes (see <a href="http://gizmosachin.github.io/VolumeBar/docs/Structs/VolumeBarStyle.html"><code>VolumeBarStyle</code></a>):</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">volumeBar</span> <span class="o">=</span> <span class="kt">VolumeBar</span><span class="o">.</span><span class="n">shared</span>
+<span class="k">let</span> <span class="nv">customStyle</span> <span class="o">=</span> <span class="kt">VolumeBarStyle</span><span class="o">.</span><span class="n">likeInstagram</span>
+<span class="n">customStyle</span><span class="o">.</span><span class="n">trackTintColor</span> <span class="o">=</span> <span class="o">.</span><span class="n">white</span>
+<span class="n">customStyle</span><span class="o">.</span><span class="n">trackTintColor</span> <span class="o">=</span> <span class="o">.</span><span class="n">darkGray</span>
+<span class="n">customStyle</span><span class="o">.</span><span class="n">backgroundColor</span> <span class="o">=</span> <span class="o">.</span><span class="n">black</span>
+<span class="n">volumeBar</span><span class="o">.</span><span class="n">style</span> <span class="o">=</span> <span class="n">customStyle</span>
+</code></pre>
+
+<p>Or even use custom animations (see <a href="http://gizmosachin.github.io/VolumeBar/docs/Structs/VolumeBarAnimation.html"><code>VolumeBarAnimation</code></a>):</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">volumeBar</span> <span class="o">=</span> <span class="kt">VolumeBar</span><span class="o">.</span><span class="n">shared</span>
+<span class="k">let</span> <span class="nv">fadeInAnimation</span> <span class="o">=</span> <span class="kt">VolumeBarAnimation</span><span class="p">({</span> <span class="p">(</span><span class="n">view</span><span class="p">,</span> <span class="n">completion</span><span class="p">)</span> <span class="k">in</span>
+    <span class="n">view</span><span class="o">.</span><span class="n">alpha</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="kt">UIView</span><span class="o">.</span><span class="nf">animate</span><span class="p">(</span><span class="nv">withDuration</span><span class="p">:</span> <span class="mf">0.2</span><span class="p">,</span> <span class="nv">animations</span><span class="p">:</span> <span class="p">{</span>
+        <span class="n">view</span><span class="o">.</span><span class="n">alpha</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="p">},</span> <span class="nv">completion</span><span class="p">:</span> <span class="n">completion</span><span class="p">)</span>
+<span class="p">})</span>
+<span class="n">volumeBar</span><span class="o">.</span><span class="n">showAnimation</span> <span class="o">=</span> <span class="n">fadeInAnimation</span>
+</code></pre>
+<h3 id='background-audio' class='heading'>Background Audio</h3>
+
+<p>If your app doesn&rsquo;t do custom audio handling, adding VolumeBar will make background music (like Spotify) pause when your app is opened.</p>
+
+<p>Prevent this by adding the following wherever you call <code>VolumeBar.shared.start()</code>:</p>
 <pre class="highlight swift"><code><span class="k">try!</span> <span class="kt">AVAudioSession</span><span class="o">.</span><span class="nf">sharedInstance</span><span class="p">()</span><span class="o">.</span><span class="nf">setCategory</span><span class="p">(</span><span class="kt">AVAudioSessionCategoryAmbient</span><span class="p">)</span>
 </code></pre>
+<h3 id='volumebar' class='heading'>VolumeBar</h3>
 
-<p>Calling the <code>start</code> method begins observing changes in the system volume. After calling <code>start</code>, <code>VolumeBar</code> will show automatically whenever your app is active and the volume changes. This is appropriate for most use cases. To stop observing changes and use the system volume HUD again, call <code>stop</code>:</p>
-<pre class="highlight swift"><code><span class="kt">VolumeBar</span><span class="o">.</span><span class="n">sharedInstance</span><span class="o">.</span><span class="nf">stop</span><span class="p">()</span>
-</code></pre>
-
-<p><a href="http://gizmosachin.github.io/VolumeBar/docs">Please see the documentation</a> and check out the sample app (VolumeBarSample) for more details.</p>
-
-<hr>
-<h5 id='appearance' class='heading'>Appearance</h5>
-
-<p>Customize tint color, bar tint color, and track tint color:</p>
-<pre class="highlight swift"><code><span class="kt">VolumeBar</span><span class="o">.</span><span class="n">sharedInstance</span><span class="o">.</span><span class="n">tintColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">white</span>
-<span class="kt">VolumeBar</span><span class="o">.</span><span class="n">sharedInstance</span><span class="o">.</span><span class="n">backgroundColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">black</span><span class="o">.</span><span class="nf">withAlphaComponent</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="kt">VolumeBar</span><span class="o">.</span><span class="n">sharedInstance</span><span class="o">.</span><span class="n">trackTintColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">clear</span>
-</code></pre>
-
-<p>Customize layout properties:</p>
-<pre class="highlight swift"><code><span class="kt">VolumeBar</span><span class="o">.</span><span class="n">sharedInstance</span><span class="o">.</span><span class="n">barHeight</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="kt">VolumeBar</span><span class="o">.</span><span class="n">sharedInstance</span><span class="o">.</span><span class="n">segmentCount</span> <span class="o">=</span> <span class="mi">8</span>
-<span class="kt">VolumeBar</span><span class="o">.</span><span class="n">sharedInstance</span><span class="o">.</span><span class="n">interitemSpacing</span> <span class="o">=</span> <span class="mi">5</span>
-</code></pre>
-
-<hr>
-<h5 id='presentation' class='heading'>Presentation</h5>
-
-<p>If <code>start</code> has been called, <code>VolumeBar</code> will automatically show when the system volume changes. You can also manually show and hide <code>VolumeBar</code>.</p>
-<pre class="highlight swift"><code><span class="kt">VolumeBar</span><span class="o">.</span><span class="n">sharedInstance</span><span class="o">.</span><span class="nf">show</span><span class="p">()</span>
-<span class="kt">VolumeBar</span><span class="o">.</span><span class="n">sharedInstance</span><span class="o">.</span><span class="nf">hide</span><span class="p">()</span>
-</code></pre>
-
-<p>Change the animation style:</p>
-<pre class="highlight swift"><code><span class="kt">VolumeBar</span><span class="o">.</span><span class="n">sharedInstance</span><span class="o">.</span><span class="n">animationStyle</span> <span class="o">=</span> <span class="o">.</span><span class="n">fade</span> <span class="c1">// default is .slide</span>
-<span class="kt">VolumeBar</span><span class="o">.</span><span class="n">sharedInstance</span><span class="o">.</span><span class="n">animationDuration</span> <span class="o">=</span> <span class="mf">0.5</span>
-<span class="kt">VolumeBar</span><span class="o">.</span><span class="n">sharedInstance</span><span class="o">.</span><span class="n">minimumVisibleDuration</span> <span class="o">=</span> <span class="mf">2.0</span>
-</code></pre>
-
-<hr>
-<h5 id='status-bar' class='heading'>Status Bar</h5>
-
-<p><code>VolumeBar</code> needs to know when the status bar is hidden or changes style. These properties should be updated in the  <code>viewWillAppear</code> method of each view controller.</p>
-<pre class="highlight swift"><code><span class="kt">VolumeBar</span><span class="o">.</span><span class="n">sharedInstance</span><span class="o">.</span><span class="n">statusBarHidden</span> <span class="o">=</span> <span class="kc">false</span>
-<span class="kt">VolumeBar</span><span class="o">.</span><span class="n">sharedInstance</span><span class="o">.</span><span class="n">statusBarStyle</span> <span class="o">=</span> <span class="o">.</span><span class="n">lightContent</span>
-</code></pre>
+<p>VolumeBar is fully documented <a href="http://gizmosachin.github.io/VolumeBar/docs">here</a>.</p>
 <h2 id='installation' class='heading'>Installation</h2>
-<h3 id='cocoapods' class='heading'>CocoaPods</h3>
-
-<p><code>VolumeBar</code> is available using the Cocoa dependency manager <a href="http://cocoapods.org/">CocoaPods</a>.</p>
-
-<p>To integrate, add the following to your <code>Podfile</code>:</p>
+<h3 id='a-href-http-cocoapods-org-cocoapods-a' class='heading'><a href="http://cocoapods.org/">CocoaPods</a></h3>
 <pre class="highlight ruby"><code><span class="n">source</span> <span class="s1">'https://github.com/CocoaPods/Specs.git'</span>
 <span class="n">use_frameworks!</span>
 
-<span class="n">pod</span> <span class="s1">'VolumeBar'</span><span class="p">,</span> <span class="s1">'~&gt; 2.0.4'</span>
+<span class="n">pod</span> <span class="s1">'VolumeBar'</span><span class="p">,</span> <span class="s1">'~&gt; 2.0.6'</span>
 </code></pre>
-<h3 id='carthage' class='heading'>Carthage</h3>
-
-<p>Installation is also available using the dependency manager <a href="https://github.com/Carthage/Carthage">Carthage</a>. To integrate, add the following line to your <code>Cartfile</code>:</p>
+<h3 id='a-href-https-github-com-carthage-carthage-carthage-a' class='heading'><a href="https://github.com/Carthage/Carthage">Carthage</a></h3>
 <pre class="highlight plaintext"><code>github "gizmosachin/VolumeBar" "master"
 </code></pre>
-<h3 id='swift-package-manager' class='heading'>Swift Package Manager</h3>
+<h2 id='sample' class='heading'>Sample</h2>
 
-<p>Installation is also available using the <a href="https://swift.org/package-manager/">Swift Package Manager</a>. To integrate, add the following to your <code>Package.swift</code>:</p>
-<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">PackageDescription</span>
+<p>Please see the <code>Sample</code> directory for a basic iOS project that uses <code>VolumeBar</code>.</p>
+<h2 id='contributing' class='heading'>Contributing</h2>
 
-<span class="k">let</span> <span class="nv">package</span> <span class="o">=</span> <span class="kt">Package</span><span class="p">(</span>
-    <span class="nv">name</span><span class="p">:</span> <span class="s">"MyProject"</span><span class="p">,</span>
-    <span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
-        <span class="o">.</span><span class="kt">Package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/gizmosachin/VolumeBar.git"</span><span class="p">,</span> <span class="nv">majorVersion</span><span class="p">:</span> <span class="mi">0</span><span class="p">),</span>
-    <span class="p">]</span>
-<span class="p">)</span>
-</code></pre>
-<h3 id='manual' class='heading'>Manual</h3>
+<p>VolumeBar is a community - contributions and discussions are welcome!</p>
 
-<p>You can also simply copy <code>VolumeBar.swift</code> into your Xcode project.</p>
-<h2 id='documentation' class='heading'>Documentation</h2>
-
-<p>API documentation is <a href="http://gizmosachin.github.io/VolumeBar/docs">available here</a>.</p>
-<h2 id='community' class='heading'>Community</h2>
-
-<ul>
-<li>Need help? Use <a href="http://stackoverflow.com/questions/tagged/volumebar-swift">Stack Overflow</a> with the tag &lsquo;volumebar-swift&rsquo;.</li>
-<li>Questions? Use <a href="http://stackoverflow.com/questions/tagged/volumebar-swift">Stack Overflow</a> with the tag &lsquo;volumebar-swift&rsquo;.</li>
-<li>Found a bug? Open an <a href="https://github.com/gizmosachin/VolumeBar/issues">issue</a>.</li>
-<li>Feature idea? Open an <a href="https://github.com/gizmosachin/VolumeBar/issues">issue</a>.</li>
-<li>Want to contribute? Submit a <a href="https://github.com/gizmosachin/VolumeBar/pulls">pull request</a>.</li>
-</ul>
+<p>Please read the <a href="CONTRIBUTING.md">contributing guidelines</a> prior to submitting a Pull Request.</p>
 <h2 id='license' class='heading'>License</h2>
 
 <p>VolumeBar is available under the MIT license, see the <a href="https://github.com/gizmosachin/VolumeBar/blob/master/LICENSE">LICENSE</a> file for more information.</p>
@@ -192,7 +153,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>© 2017 <a class="link" href="http://gizmosachin.com" target="_blank" rel="external">Sachin Patel</a>.</p>
+          <p>© 2018 <a class="link" href="http://gizmosachin.com" target="_blank" rel="external">Sachin Patel</a>.</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
