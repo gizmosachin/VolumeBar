@@ -35,16 +35,16 @@
               <li class="nav-group-task">
                 <a href="../Classes/VolumeBar.html">VolumeBar</a>
               </li>
-              <li class="nav-group-task">
-                <a href="../Classes/VolumeBar/AnimationStyle.html">– AnimationStyle</a>
-              </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Protocols.html">Protocols</a>
+            <a href="../Structs.html">Structs</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Protocols/VolumeDelegate.html">VolumeDelegate</a>
+                <a href="../Structs/VolumeBarAnimation.html">VolumeBarAnimation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/VolumeBarStyle.html">VolumeBarStyle</a>
               </li>
             </ul>
           </li>
@@ -54,14 +54,7 @@
         <section>
           <section class="section">
             <h1>VolumeBar</h1>
-              <div class="declaration">
-                <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">VolumeBar</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
-
-                </div>
-              </div>
-            <p>VolumeBar, volume indicator that doesn&rsquo;t obstruct content.</p>
-
+            
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -69,9 +62,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9VolumeBarAAC14AnimationStyleO"></a>
-                    <a name="//apple_ref/swift/Enum/AnimationStyle" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9VolumeBarAAC14AnimationStyleO">AnimationStyle</a>
+                    <a name="/s:9VolumeBarAAC6sharedABvZ"></a>
+                    <a name="//apple_ref/swift/Variable/shared" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9VolumeBarAAC6sharedABvZ">shared</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -79,15 +72,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A set of animation styles.</p>
+                        <p>The shared VolumeBar singleton.</p>
 
-                        <a href="../Classes/VolumeBar/AnimationStyle.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">AnimationStyle</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">shared</span> <span class="o">=</span> <span class="kt">VolumeBar</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -97,9 +89,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@VolumeBar@objc(cs)VolumeBar(cpy)sharedInstance"></a>
-                    <a name="//apple_ref/swift/Variable/sharedInstance" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@VolumeBar@objc(cs)VolumeBar(cpy)sharedInstance">sharedInstance</a>
+                    <a name="/s:9VolumeBarAAC4viewSo11UIStackViewCSgv"></a>
+                    <a name="//apple_ref/swift/Property/view" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9VolumeBarAAC4viewSo11UIStackViewCSgv">view</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -107,41 +99,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The shared instance of <code>VolumeBar</code>. This should be used in most cases.</p>
+                        <p>The stack view that displays the volume bar.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">sharedInstance</span> <span class="o">=</span> <span class="kt">VolumeBar</span><span class="p">()</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:9VolumeBarAAC8delegateAA0A8Delegate_pSgv"></a>
-                    <a name="//apple_ref/swift/Property/delegate" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9VolumeBarAAC8delegateAA0A8Delegate_pSgv">delegate</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The delegate must adopt the <code><a href="../Protocols/VolumeDelegate.html">VolumeDelegate</a></code> protocol.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/VolumeDelegate.html">VolumeDelegate</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">view</span><span class="p">:</span> <span class="kt">UIStackView</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -162,63 +127,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:9VolumeBarAAC14animationStyleAB09AnimationD0Ov"></a>
-                    <a name="//apple_ref/swift/Property/animationStyle" class="dashAnchor"></a>
-                    <a class="token" href="#/s:9VolumeBarAAC14animationStyleAB09AnimationD0Ov">animationStyle</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The animation style to be applied to this <code>VolumeBar</code>.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">animationStyle</span><span class="p">:</span> <span class="kt"><a href="../Classes/VolumeBar/AnimationStyle.html">AnimationStyle</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">slide</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@M@VolumeBar@objc(cs)VolumeBar(py)animationDuration"></a>
-                    <a name="//apple_ref/swift/Property/animationDuration" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@VolumeBar@objc(cs)VolumeBar(py)animationDuration">animationDuration</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The animation duration to be applied to this <code>VolumeBar</code> when being presented or hidden.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">animationDuration</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="o">=</span> <span class="mf">0.3</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@M@VolumeBar@objc(cs)VolumeBar(py)minimumVisibleDuration"></a>
+                    <a name="/s:9VolumeBarAAC22minimumVisibleDurationSdv"></a>
                     <a name="//apple_ref/swift/Property/minimumVisibleDuration" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@VolumeBar@objc(cs)VolumeBar(py)minimumVisibleDuration">minimumVisibleDuration</a>
+                    <a class="token" href="#/s:9VolumeBarAAC22minimumVisibleDurationSdv">minimumVisibleDuration</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -226,9 +137,9 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The minimum duration to be shown on screen.</p>
-
-<p>Subsequent volume button presses that occur while this <code>VolumeBar</code> is already on screen will extend the on screen duration by this value.</p>
+                        <p>The minimum visible duration that VolumeBar will appear on screen after a volume button is pressed.
+If VolumeBar is already showing and a volume button is pressed, VolumeBar will continue to show
+and the duration it&rsquo;s displayed on screen will be extended by this number of seconds.</p>
 
                       </div>
                       <div class="declaration">
@@ -242,23 +153,12 @@
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <div class="task-name-container">
-                <a name="/Layout"></a>
-                <a name="//apple_ref/swift/Section/Layout" class="dashAnchor"></a>
-                <a href="#/Layout">
-                  <h3 class="section-name">Layout</h3>
-                </a>
-              </div>
-              <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@VolumeBar@objc(cs)VolumeBar(py)segmentCount"></a>
-                    <a name="//apple_ref/swift/Property/segmentCount" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@VolumeBar@objc(cs)VolumeBar(py)segmentCount">segmentCount</a>
+                    <a name="/s:9VolumeBarAAC13showAnimationAA0abD0Vv"></a>
+                    <a name="//apple_ref/swift/Property/showAnimation" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9VolumeBarAAC13showAnimationAA0abD0Vv">showAnimation</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -266,16 +166,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The number of segments that the <code>VolumeBar</code> should be broken into. </p>
-
-<p>Use this value with <code><a href="../Classes/VolumeBar.html#/c:@M@VolumeBar@objc(cs)VolumeBar(py)interitemSpacing">interitemSpacing</a></code> to get a segmented appearance rather than a continuous bar.</p>
+                        <p>The animation used to show VolumeBar.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">segmentCount</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">16</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">showAnimation</span><span class="p">:</span> <span class="kt"><a href="../Structs/VolumeBarAnimation.html">VolumeBarAnimation</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">fadeIn</span></code></pre>
 
                         </div>
                       </div>
@@ -285,9 +183,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@VolumeBar@objc(cs)VolumeBar(py)barHeight"></a>
-                    <a name="//apple_ref/swift/Property/barHeight" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@VolumeBar@objc(cs)VolumeBar(py)barHeight">barHeight</a>
+                    <a name="/s:9VolumeBarAAC13hideAnimationAA0abD0Vv"></a>
+                    <a name="//apple_ref/swift/Property/hideAnimation" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9VolumeBarAAC13hideAnimationAA0abD0Vv">hideAnimation</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -295,119 +193,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The height of the internal bar.</p>
-
-<p>See <code>updateHeight()</code>. The height of the <code>VolumeBar</code> is set as follows:</p>
-<h2 id='in-portrait-mode' class='heading'>In portrait mode:</h2>
-
-<ul>
-<li>If <code><a href="../Classes/VolumeBar.html#/c:@M@VolumeBar@objc(cs)VolumeBar(py)statusBarHidden">statusBarHidden</a></code> = <code>false</code>: 20</li>
-<li>If <code><a href="../Classes/VolumeBar.html#/c:@M@VolumeBar@objc(cs)VolumeBar(py)statusBarHidden">statusBarHidden</a></code> = <code>true</code> : <code>barHeight</code> + 6</li>
-</ul>
-<h2 id='in-landscape-mode' class='heading'>In landscape mode:</h2>
-<li>If the <code>rootViewController</code> of the key window is a <code>UINavigationController</code>: the height of the navigation bar</li>
-<li><p>Otherwise: <code>barHeight</code> + 6</p></li>
-<div class="aside aside-seealso">
-    <p class="aside-title">Seealso</p>
-    <p><code>updateHeight(:)</code></p>
-
-</div>
+                        <p>The animation used to hide VolumeBar.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">barHeight</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mf">2.0</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@M@VolumeBar@objc(cs)VolumeBar(py)interitemSpacing"></a>
-                    <a name="//apple_ref/swift/Property/interitemSpacing" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@VolumeBar@objc(cs)VolumeBar(py)interitemSpacing">interitemSpacing</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The spacing between segments of the bar.</p>
-
-<p>Set this value to greater than 0 to get a segmented appearance rather than a continuous bar.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">interitemSpacing</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@M@VolumeBar@objc(cs)VolumeBar(py)statusBarHidden"></a>
-                    <a name="//apple_ref/swift/Property/statusBarHidden" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@VolumeBar@objc(cs)VolumeBar(py)statusBarHidden">statusBarHidden</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A Boolean value indicating whether the status bar on the current view controller is hidden.</p>
-
-<p>Important: Update this value on each view controller where <code>prefersStatusBarHidden()</code> is overridden.
-Not updating this value appropriately will result in presentation glitches for <code>VolumeBar</code>.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">statusBarHidden</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@M@VolumeBar@objc(cs)VolumeBar(py)statusBarStyle"></a>
-                    <a name="//apple_ref/swift/Property/statusBarStyle" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@VolumeBar@objc(cs)VolumeBar(py)statusBarStyle">statusBarStyle</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The status bar style of the current view controller.</p>
-
-<p>Update this value on each view controller where <code>preferredStatusBarStyle()</code> is overridden.
-Not updating this value appropriately will result in presentation glitches for <code>VolumeBar</code>.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">statusBarStyle</span><span class="p">:</span> <span class="kt">UIStatusBarStyle</span> <span class="o">=</span> <span class="o">.</span><span class="k">default</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">hideAnimation</span><span class="p">:</span> <span class="kt"><a href="../Structs/VolumeBarAnimation.html">VolumeBarAnimation</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">fadeOut</span></code></pre>
 
                         </div>
                       </div>
@@ -418,19 +211,19 @@ Not updating this value appropriately will result in presentation glitches for <
             </div>
             <div class="task-group">
               <div class="task-name-container">
-                <a name="/Appearance"></a>
-                <a name="//apple_ref/swift/Section/Appearance" class="dashAnchor"></a>
-                <a href="#/Appearance">
-                  <h3 class="section-name">Appearance</h3>
+                <a name="/Style"></a>
+                <a name="//apple_ref/swift/Section/Style" class="dashAnchor"></a>
+                <a href="#/Style">
+                  <h3 class="section-name">Style</h3>
                 </a>
               </div>
               <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@VolumeBar@objc(cs)VolumeBar(py)tintColor"></a>
-                    <a name="//apple_ref/swift/Property/tintColor" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@VolumeBar@objc(cs)VolumeBar(py)tintColor">tintColor</a>
+                    <a name="/s:9VolumeBarAAC5styleAA0aB5StyleVv"></a>
+                    <a name="//apple_ref/swift/Property/style" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9VolumeBarAAC5styleAA0aB5StyleVv">style</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -438,74 +231,14 @@ Not updating this value appropriately will result in presentation glitches for <
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The tint color of the <code>VolumeBar</code>.</p>
-
-<p>This value controls the tint color of the internal bar that reflects the volume level.</p>
+                        <p>The current style of VolumeBar.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">tintColor</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">black</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@M@VolumeBar@objc(cs)VolumeBar(py)backgroundColor"></a>
-                    <a name="//apple_ref/swift/Property/backgroundColor" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@VolumeBar@objc(cs)VolumeBar(py)backgroundColor">backgroundColor</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The background color of the <code>VolumeBar</code>.</p>
-
-<p>This value controls the background color of the <code>VolumeBar</code>.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">backgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">white</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@M@VolumeBar@objc(cs)VolumeBar(py)trackTintColor"></a>
-                    <a name="//apple_ref/swift/Property/trackTintColor" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@VolumeBar@objc(cs)VolumeBar(py)trackTintColor">trackTintColor</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The track color of the <code>VolumeBar</code>.</p>
-
-<p>This value controls the background color of the track.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">trackTintColor</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">black</span><span class="o">.</span><span class="nf">withAlphaComponent</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">style</span><span class="p">:</span> <span class="kt"><a href="../Structs/VolumeBarStyle.html">VolumeBarStyle</a></span> <span class="o">=</span> <span class="kt"><a href="../Structs/VolumeBarStyle.html">VolumeBarStyle</a></span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -515,13 +248,20 @@ Not updating this value appropriately will result in presentation glitches for <
               </ul>
             </div>
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Lifecycle"></a>
+                <a name="//apple_ref/swift/Section/Lifecycle" class="dashAnchor"></a>
+                <a href="#/Lifecycle">
+                  <h3 class="section-name">Lifecycle</h3>
+                </a>
+              </div>
               <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@CM@VolumeBar@objc(cs)VolumeBar(im)start"></a>
+                    <a name="/s:9VolumeBarAAC5startyyF"></a>
                     <a name="//apple_ref/swift/Method/start()" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@VolumeBar@objc(cs)VolumeBar(im)start">start()</a>
+                    <a class="token" href="#/s:9VolumeBarAAC5startyyF">start()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -529,10 +269,7 @@ Not updating this value appropriately will result in presentation glitches for <
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Start observing changes in volume.</p>
-
-<p>Once this method is called, the <code>VolumeBar</code> will automatically show when volume buttons
-are pressed as long as the application is active and <code><a href="../Classes/VolumeBar.html#/c:@CM@VolumeBar@objc(cs)VolumeBar(im)stop">stop()</a></code> hasn&rsquo;t been called.</p>
+                        <p>Start VolumeBar and automatically show when the volume changes.</p>
 
                       </div>
                       <div class="declaration">
@@ -549,9 +286,9 @@ are pressed as long as the application is active and <code><a href="../Classes/V
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@CM@VolumeBar@objc(cs)VolumeBar(im)stop"></a>
+                    <a name="/s:9VolumeBarAAC4stopyyF"></a>
                     <a name="//apple_ref/swift/Method/stop()" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@VolumeBar@objc(cs)VolumeBar(im)stop">stop()</a>
+                    <a class="token" href="#/s:9VolumeBarAAC4stopyyF">stop()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -559,10 +296,7 @@ are pressed as long as the application is active and <code><a href="../Classes/V
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Stop observing changes in volume.</p>
-
-<p>Once this method is called, the <code>VolumeBar</code> will no longer show when volume buttons
-are pressed. Calling this method has no effect if <code><a href="../Classes/VolumeBar.html#/c:@CM@VolumeBar@objc(cs)VolumeBar(im)start">start()</a></code> hasn&rsquo;t previously been called.</p>
+                        <p>Stop VolumeBar from automatically showing when the volume changes.</p>
 
                       </div>
                       <div class="declaration">
@@ -590,9 +324,9 @@ are pressed. Calling this method has no effect if <code><a href="../Classes/Volu
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@CM@VolumeBar@objc(cs)VolumeBar(im)show"></a>
+                    <a name="/s:9VolumeBarAAC4showyyF"></a>
                     <a name="//apple_ref/swift/Method/show()" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@VolumeBar@objc(cs)VolumeBar(im)show">show()</a>
+                    <a class="token" href="#/s:9VolumeBarAAC4showyyF">show()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -600,10 +334,7 @@ are pressed. Calling this method has no effect if <code><a href="../Classes/Volu
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Shows the <code>VolumeBar</code> at the top of the screen.</p>
-
-<p>The presentation of the <code>VolumeBar</code> can be customized by setting the <code><a href="../Classes/VolumeBar.html#/s:9VolumeBarAAC14animationStyleAB09AnimationD0Ov">animationStyle</a></code>,
-<code><a href="../Classes/VolumeBar.html#/c:@M@VolumeBar@objc(cs)VolumeBar(py)animationDuration">animationDuration</a></code>, and <code><a href="../Classes/VolumeBar.html#/c:@M@VolumeBar@objc(cs)VolumeBar(py)minimumVisibleDuration">minimumVisibleDuration</a></code> properties of the <code>VolumeBar</code>.</p>
+                        <p>Show VolumeBar immediately using the current <code><a href="../Classes/VolumeBar.html#/s:9VolumeBarAAC13showAnimationAA0abD0Vv">showAnimation</a></code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -620,9 +351,9 @@ are pressed. Calling this method has no effect if <code><a href="../Classes/Volu
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@CM@VolumeBar@objc(cs)VolumeBar(im)hide"></a>
+                    <a name="/s:9VolumeBarAAC4hideyyF"></a>
                     <a name="//apple_ref/swift/Method/hide()" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@VolumeBar@objc(cs)VolumeBar(im)hide">hide()</a>
+                    <a class="token" href="#/s:9VolumeBarAAC4hideyyF">hide()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -630,103 +361,14 @@ are pressed. Calling this method has no effect if <code><a href="../Classes/Volu
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Hides the <code>VolumeBar</code>.</p>
-
-<p>The presentation of the <code>VolumeBar</code> can be customized by setting the <code><a href="../Classes/VolumeBar.html#/s:9VolumeBarAAC14animationStyleAB09AnimationD0Ov">animationStyle</a></code>,
-<code><a href="../Classes/VolumeBar.html#/c:@M@VolumeBar@objc(cs)VolumeBar(py)animationDuration">animationDuration</a></code>, and <code><a href="../Classes/VolumeBar.html#/c:@M@VolumeBar@objc(cs)VolumeBar(py)minimumVisibleDuration">minimumVisibleDuration</a></code> properties of the <code>VolumeBar</code>.</p>
+                        <p>Show VolumeBar immediately using the current <code><a href="../Classes/VolumeBar.html#/s:9VolumeBarAAC13hideAnimationAA0abD0Vv">hideAnimation</a></code>.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">hide</span><span class="p">()</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@CM@VolumeBar@objc(cs)VolumeBar(im)observeValueForKeyPath:ofObject:change:context:"></a>
-                    <a name="//apple_ref/swift/Method/observeValue(forKeyPath:of:change:context:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@VolumeBar@objc(cs)VolumeBar(im)observeValueForKeyPath:ofObject:change:context:">observeValue(forKeyPath:of:change:context:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Observe changes in volume.</p>
-
-<p>This method is called when the user presses either of the volume buttons.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">override</span> <span class="kd">func</span> <span class="nf">observeValue</span><span class="p">(</span><span class="n">forKeyPath</span> <span class="nv">keyPath</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="n">of</span> <span class="nv">object</span><span class="p">:</span> <span class="kt">Any</span><span class="p">?,</span> <span class="nv">change</span><span class="p">:</span> <span class="p">[</span><span class="kt">NSKeyValueChangeKey</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]?,</span> <span class="nv">context</span><span class="p">:</span> <span class="kt">UnsafeMutableRawPointer</span><span class="p">?)</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@CM@VolumeBar@objc(cs)VolumeBar(im)applicationWillResignActiveWithNotification:"></a>
-                    <a name="//apple_ref/swift/Method/applicationWillResignActive(notification:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@VolumeBar@objc(cs)VolumeBar(im)applicationWillResignActiveWithNotification:">applicationWillResignActive(notification:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Observe when the application background state changes.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">applicationWillResignActive</span><span class="p">(</span><span class="nv">notification</span><span class="p">:</span> <span class="kt">Notification</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@CM@VolumeBar@objc(cs)VolumeBar(im)applicationDidBecomeActiveWithNotification:"></a>
-                    <a name="//apple_ref/swift/Method/applicationDidBecomeActive(notification:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@VolumeBar@objc(cs)VolumeBar(im)applicationDidBecomeActiveWithNotification:">applicationDidBecomeActive(notification:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">VolumeBar</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">@objc</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">hide</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -738,7 +380,7 @@ are pressed. Calling this method has no effect if <code><a href="../Classes/Volu
           </section>
         </section>
         <section id="footer">
-          <p>© 2017 <a class="link" href="http://gizmosachin.com" target="_blank" rel="external">Sachin Patel</a>.</p>
+          <p>© 2018 <a class="link" href="http://gizmosachin.com" target="_blank" rel="external">Sachin Patel</a>.</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

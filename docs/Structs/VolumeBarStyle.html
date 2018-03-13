@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>VolumeBarStyle Struct Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Struct/VolumeBarStyle" class="dashAnchor"></a>
+    <a title="VolumeBarStyle Struct Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">VolumeBar Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/gizmosachin/VolumeBar"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fgizmosachin%2Egithub%2Eio%2FVolumeBar%2Fdocsets%2FVolumeBar%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">VolumeBar Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        VolumeBarStyle Struct Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/VolumeBar.html">VolumeBar</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/VolumeBarAnimation.html">VolumeBarAnimation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/VolumeBarStyle.html">VolumeBarStyle</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>VolumeBarStyle</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">VolumeBarStyle</span></code></pre>
+
+                </div>
+              </div>
+            <p>A value type wrapping parameters used to customize the appearance of VolumeBar.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Layout"></a>
+                <a name="//apple_ref/swift/Section/Layout" class="dashAnchor"></a>
+                <a href="#/Layout">
+                  <h3 class="section-name">Layout</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9VolumeBar0aB5StyleV6height12CoreGraphics7CGFloatVv"></a>
+                    <a name="//apple_ref/swift/Property/height" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9VolumeBar0aB5StyleV6height12CoreGraphics7CGFloatVv">height</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The height of the bar that will be displayed on screen.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">height</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">10</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9VolumeBar0aB5StyleV10edgeInsetsSC06UIEdgeE0Vv"></a>
+                    <a name="//apple_ref/swift/Property/edgeInsets" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9VolumeBar0aB5StyleV10edgeInsetsSC06UIEdgeE0Vv">edgeInsets</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Insets from the top edge of the device screen.</p>
+
+<p>If <code><a href="../Structs/VolumeBarStyle.html#/s:9VolumeBar0aB5StyleV22respectsSafeAreaInsetsSbv">respectsSafeAreaInsets</a></code> is <code>false</code>, VolumeBar will be inset from screen edges
+by exactly these insets.</p>
+
+<p>If <code><a href="../Structs/VolumeBarStyle.html#/s:9VolumeBar0aB5StyleV22respectsSafeAreaInsetsSbv">respectsSafeAreaInsets</a></code> is <code>true</code>, VolumeBar will be
+inset by the sum of the safe area insets of the device and <code>edgeInsets</code>.</p>
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <code><a href="../Structs/VolumeBarStyle.html#/s:9VolumeBar0aB5StyleV22respectsSafeAreaInsetsSbv">respectsSafeAreaInsets</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">edgeInsets</span><span class="p">:</span> <span class="kt">UIEdgeInsets</span> <span class="o">=</span> <span class="kt">UIEdgeInsets</span><span class="p">(</span><span class="nv">top</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="nv">left</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="nv">bottom</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="nv">right</span><span class="p">:</span> <span class="mi">5</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9VolumeBar0aB5StyleV22respectsSafeAreaInsetsSbv"></a>
+                    <a name="//apple_ref/swift/Property/respectsSafeAreaInsets" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9VolumeBar0aB5StyleV22respectsSafeAreaInsetsSbv">respectsSafeAreaInsets</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Whether or not VolumeBar should respect <code>safeAreaInsets</code> when displaying.</p>
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <code><a href="../Structs/VolumeBarStyle.html#/s:9VolumeBar0aB5StyleV10edgeInsetsSC06UIEdgeE0Vv">edgeInsets</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">respectsSafeAreaInsets</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Appearance"></a>
+                <a name="//apple_ref/swift/Section/Appearance" class="dashAnchor"></a>
+                <a href="#/Appearance">
+                  <h3 class="section-name">Appearance</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9VolumeBar0aB5StyleV12segmentCountSuv"></a>
+                    <a name="//apple_ref/swift/Property/segmentCount" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9VolumeBar0aB5StyleV12segmentCountSuv">segmentCount</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The number of segments that the VolumeBar is made up of.
+Use this with <code><a href="../Structs/VolumeBarStyle.html#/s:9VolumeBar0aB5StyleV14segmentSpacing12CoreGraphics7CGFloatVv">segmentSpacing</a></code> to give VolumeBar a segmented appearance.</p>
+
+<p>The default value, 16, is equal to the number of volume steps on iOS devices.
+(When the volume is 0%, pressing volume up exactly 16 times will cause the volume to reach 100%)</p>
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <code><a href="../Structs/VolumeBarStyle.html#/s:9VolumeBar0aB5StyleV14segmentSpacing12CoreGraphics7CGFloatVv">segmentSpacing</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">segmentCount</span><span class="p">:</span> <span class="kt">UInt</span> <span class="o">=</span> <span class="mi">16</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9VolumeBar0aB5StyleV14segmentSpacing12CoreGraphics7CGFloatVv"></a>
+                    <a name="//apple_ref/swift/Property/segmentSpacing" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9VolumeBar0aB5StyleV14segmentSpacing12CoreGraphics7CGFloatVv">segmentSpacing</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The number of points between individual segments in the VolumeBar.</p>
+<div class="aside aside-seealso">
+    <p class="aside-title">Seealso</p>
+    <code><a href="../Structs/VolumeBarStyle.html#/s:9VolumeBar0aB5StyleV12segmentCountSuv">segmentCount</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">segmentSpacing</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9VolumeBar0aB5StyleV12cornerRadius12CoreGraphics7CGFloatVv"></a>
+                    <a name="//apple_ref/swift/Property/cornerRadius" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9VolumeBar0aB5StyleV12cornerRadius12CoreGraphics7CGFloatVv">cornerRadius</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The corner radius of the VolumeBar.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">cornerRadius</span><span class="p">:</span> <span class="kt">CGFloat</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Colors"></a>
+                <a name="//apple_ref/swift/Section/Colors" class="dashAnchor"></a>
+                <a href="#/Colors">
+                  <h3 class="section-name">Colors</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9VolumeBar0aB5StyleV17progressTintColorSo7UIColorCv"></a>
+                    <a name="//apple_ref/swift/Property/progressTintColor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9VolumeBar0aB5StyleV17progressTintColorSo7UIColorCv">progressTintColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The color of the progress displayed on the bar.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">progressTintColor</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="o">=</span> <span class="o">.</span><span class="n">black</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9VolumeBar0aB5StyleV14trackTintColorSo7UIColorCv"></a>
+                    <a name="//apple_ref/swift/Property/trackTintColor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9VolumeBar0aB5StyleV14trackTintColorSo7UIColorCv">trackTintColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The background color of the track.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">trackTintColor</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="o">.</span><span class="n">black</span><span class="o">.</span><span class="nf">withAlphaComponent</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9VolumeBar0aB5StyleV15backgroundColorSo7UIColorCv"></a>
+                    <a name="//apple_ref/swift/Property/backgroundColor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9VolumeBar0aB5StyleV15backgroundColorSo7UIColorCv">backgroundColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The background color behind the track view.
+This should match the color of the view behind the VolumeBar, which might be the color of your navigation bar.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">backgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span> <span class="o">=</span> <span class="o">.</span><span class="n">white</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Presets"></a>
+                <a name="//apple_ref/swift/Section/Presets" class="dashAnchor"></a>
+                <a href="#/Presets">
+                  <h3 class="section-name">Presets</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9VolumeBar0aB5StyleV13likeInstagramACvZ"></a>
+                    <a name="//apple_ref/swift/Variable/likeInstagram" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9VolumeBar0aB5StyleV13likeInstagramACvZ">likeInstagram</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A volume bar style like Instagram, where the bar is a continuous progress view
+that displays to the left of the notch on iPhone X and covers the full width
+of the iOS status bar on all other iOS devices.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">likeInstagram</span><span class="p">:</span> <span class="kt">VolumeBarStyle</span> <span class="o">=</span> <span class="kt">UIDevice</span><span class="o">.</span><span class="n">current</span><span class="o">.</span><span class="n">volumeBar_isiPhoneX</span> <span class="p">?</span> <span class="o">.</span><span class="nv">leftOfNotch</span> <span class="p">:</span> <span class="o">.</span><span class="n"><a href="../Structs/VolumeBarStyle.html#/s:9VolumeBar0aB5StyleV19fullWidthContinuousACvZ">fullWidthContinuous</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9VolumeBar0aB5StyleV12likeSnapchatACvZ"></a>
+                    <a name="//apple_ref/swift/Variable/likeSnapchat" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9VolumeBar0aB5StyleV12likeSnapchatACvZ">likeSnapchat</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A volume bar style like Snapchat, where the bar is a segmented progress view
+that displays under the notch and status bar on iPhone X (respecting the device&rsquo;s
+safe area insets) and covers the iOS status bar on all other iOS devices.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">likeSnapchat</span><span class="p">:</span> <span class="kt">VolumeBarStyle</span> <span class="o">=</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9VolumeBar0aB5StyleV19fullWidthContinuousACvZ"></a>
+                    <a name="//apple_ref/swift/Variable/fullWidthContinuous" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9VolumeBar0aB5StyleV19fullWidthContinuousACvZ">fullWidthContinuous</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A volume bar style that displays a continuous progress view and has minimal insets.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">fullWidthContinuous</span><span class="p">:</span> <span class="kt">VolumeBarStyle</span> <span class="o">=</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9VolumeBar0aB5StyleV11leftOfNotchACvZ"></a>
+                    <a name="//apple_ref/swift/Variable/leftOfNotch" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9VolumeBar0aB5StyleV11leftOfNotchACvZ">leftOfNotch</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A volume bar style that displays to the left of the notch on iPhone X.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">leftOfNotch</span><span class="p">:</span> <span class="kt">VolumeBarStyle</span> <span class="o">=</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9VolumeBar0aB5StyleV12rightOfNotchACvZ"></a>
+                    <a name="//apple_ref/swift/Variable/rightOfNotch" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9VolumeBar0aB5StyleV12rightOfNotchACvZ">rightOfNotch</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A volume bar style that displays to the right of the notch on iPhone X.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">rightOfNotch</span><span class="p">:</span> <span class="kt">VolumeBarStyle</span> <span class="o">=</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>© 2018 <a class="link" href="http://gizmosachin.com" target="_blank" rel="external">Sachin Patel</a>.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>VolumeBarAnimation Struct Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Struct/VolumeBarAnimation" class="dashAnchor"></a>
+    <a title="VolumeBarAnimation Struct Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">VolumeBar Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/gizmosachin/VolumeBar"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fgizmosachin%2Egithub%2Eio%2FVolumeBar%2Fdocsets%2FVolumeBar%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">VolumeBar Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        VolumeBarAnimation Struct Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/VolumeBar.html">VolumeBar</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/VolumeBarAnimation.html">VolumeBarAnimation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/VolumeBarStyle.html">VolumeBarStyle</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>VolumeBarAnimation</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">VolumeBarAnimation</span></code></pre>
+
+                </div>
+              </div>
+            <p>A value type wrapping a VolumeBarAnimationBlock.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9VolumeBar0aB9AnimationV5Blocka"></a>
+                    <a name="//apple_ref/swift/Alias/Block" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9VolumeBar0aB9AnimationV5Blocka">Block</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A block used to animate VolumeBar.</p>
+
+<p>VolumeBar does not perform any state changes before animations.
+Your block is responsible for the full lifecycle of your animation.
+See <code>VolumeBarAnimation+Presets.swift</code> for examples of how to do this.</p>
+
+<p>Parameters:</p>
+
+<ul>
+<li><code>view</code>: The internal view to operate on as part of this animation.</li>
+<li><code>completionHandler</code>: The completion handler that you must call when your animation completes.</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Block</span> <span class="o">=</span> <span class="p">((</span><span class="kt">UIView</span><span class="p">,</span> <span class="kt">VolumeBarAnimation</span><span class="o">.</span><span class="kt">CompletionHandler</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9VolumeBar0aB9AnimationV14animationBlockySo6UIViewC_ySbcSgtcv"></a>
+                    <a name="//apple_ref/swift/Property/animationBlock" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9VolumeBar0aB9AnimationV14animationBlockySo6UIViewC_ySbcSgtcv">animationBlock</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">VolumeBarAnimation</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9VolumeBar0aB9AnimationVACySo6UIViewC_ySbcSgtccfc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9VolumeBar0aB9AnimationVACySo6UIViewC_ySbcSgtccfc">init(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">VolumeBarAnimation</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Presets"></a>
+                <a name="//apple_ref/swift/Section/Presets" class="dashAnchor"></a>
+                <a href="#/Presets">
+                  <h3 class="section-name">Presets</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9VolumeBar0aB9AnimationV6fadeInACvZ"></a>
+                    <a name="//apple_ref/swift/Variable/fadeIn" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9VolumeBar0aB9AnimationV6fadeInACvZ">fadeIn</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A simple fade in animation.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">fadeIn</span> <span class="o">=</span> <span class="kt">VolumeBarAnimation</span><span class="p">({</span> <span class="p">(</span><span class="n">view</span><span class="p">,</span> <span class="n">completion</span><span class="p">)</span> <span class="k">in</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9VolumeBar0aB9AnimationV7fadeOutACvZ"></a>
+                    <a name="//apple_ref/swift/Variable/fadeOut" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9VolumeBar0aB9AnimationV7fadeOutACvZ">fadeOut</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A simple fade out animation.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">fadeOut</span> <span class="o">=</span> <span class="kt">VolumeBarAnimation</span><span class="p">({</span> <span class="p">(</span><span class="n">view</span><span class="p">,</span> <span class="n">completion</span><span class="p">)</span> <span class="k">in</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9VolumeBar0aB9AnimationV14slideAndFadeInACvZ"></a>
+                    <a name="//apple_ref/swift/Variable/slideAndFadeIn" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9VolumeBar0aB9AnimationV14slideAndFadeInACvZ">slideAndFadeIn</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Fade in and slide down from above the status bar.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">slideAndFadeIn</span> <span class="o">=</span> <span class="kt">VolumeBarAnimation</span><span class="p">({</span> <span class="p">(</span><span class="n">view</span><span class="p">,</span> <span class="n">completion</span><span class="p">)</span> <span class="k">in</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:9VolumeBar0aB9AnimationV15slideAndFadeOutACvZ"></a>
+                    <a name="//apple_ref/swift/Variable/slideAndFadeOut" class="dashAnchor"></a>
+                    <a class="token" href="#/s:9VolumeBar0aB9AnimationV15slideAndFadeOutACvZ">slideAndFadeOut</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Fade out and slide up to above the status bar.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">slideAndFadeOut</span> <span class="o">=</span> <span class="kt">VolumeBarAnimation</span><span class="p">({</span> <span class="p">(</span><span class="n">view</span><span class="p">,</span> <span class="n">completion</span><span class="p">)</span> <span class="k">in</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>© 2018 <a class="link" href="http://gizmosachin.com" target="_blank" rel="external">Sachin Patel</a>.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
