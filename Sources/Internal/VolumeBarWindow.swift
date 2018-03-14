@@ -42,6 +42,7 @@ internal final class VolumeBarWindow: UIWindow {
 		systemVolumeView.isHidden = false
 		systemVolumeView.clipsToBounds = true
 		systemVolumeView.showsRouteButton = false
+		systemVolumeView.alpha = 0.0001
 		
 		super.init(frame: .zero)
 		
@@ -76,15 +77,18 @@ internal extension VolumeBarWindow {
 		}
 		
 		// Set window frame
-		let windowOrigin = CGPoint.zero
-		var windowSize = CGSize(width: UIApplication.shared.statusBarFrame.width, height: systemEdgeInsets.top + style.edgeInsets.top + style.height + style.edgeInsets.bottom)
-		windowSize.height = max(windowSize.height, UIApplication.shared.statusBarFrame.height)
-		frame = CGRect(origin: windowOrigin, size: windowSize)
+		let windowX = CGFloat(0)
+		let windowY = CGFloat(0)
+		let windowWidth = abs(max(UIScreen.main.bounds.width, UIApplication.shared.statusBarFrame.width))
+		let windowHeight = abs(max(systemEdgeInsets.top + style.edgeInsets.top + style.height + style.edgeInsets.bottom, UIApplication.shared.statusBarFrame.height))
+		frame = CGRect(x: windowX, y: windowY, width: windowWidth, height: windowHeight)
 		
 		// Set view frame
-		let viewOrigin = CGPoint(x: systemEdgeInsets.left + style.edgeInsets.left, y: systemEdgeInsets.top + style.edgeInsets.top)
-		let viewSize = CGSize(width: windowSize.width - windowOrigin.x - viewOrigin.x - (systemEdgeInsets.right + style.edgeInsets.right), height: style.height)
-		viewController.view.frame = CGRect(origin: viewOrigin, size: viewSize)
+		let viewX = abs(systemEdgeInsets.left + style.edgeInsets.left)
+		let viewY = abs(systemEdgeInsets.top + style.edgeInsets.top)
+		let viewWidth = abs(windowWidth - windowX - viewX - (systemEdgeInsets.right + style.edgeInsets.right))
+		let viewHeight = abs(style.height)
+		viewController.view.frame = CGRect(x: viewX, y: viewY, width: viewWidth, height: viewHeight)
 	}
 }
 
