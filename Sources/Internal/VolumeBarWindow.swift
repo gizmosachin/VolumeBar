@@ -42,6 +42,7 @@ internal final class VolumeBarWindow: UIWindow {
 		systemVolumeView.isHidden = false
 		systemVolumeView.clipsToBounds = true
 		systemVolumeView.showsRouteButton = false
+		systemVolumeView.alpha = 0.0001
 		
 		super.init(frame: .zero)
 		
@@ -77,7 +78,8 @@ internal extension VolumeBarWindow {
 		
 		// Set window frame
 		let windowOrigin = CGPoint.zero
-		var windowSize = CGSize(width: UIApplication.shared.statusBarFrame.width, height: systemEdgeInsets.top + style.edgeInsets.top + style.height + style.edgeInsets.bottom)
+		var windowSize = CGSize(width: UIScreen.main.bounds.width, height: systemEdgeInsets.top + style.edgeInsets.top + style.height + style.edgeInsets.bottom)
+		windowSize.width = max(windowSize.width, UIApplication.shared.statusBarFrame.width)
 		windowSize.height = max(windowSize.height, UIApplication.shared.statusBarFrame.height)
 		frame = CGRect(origin: windowOrigin, size: windowSize)
 		
