@@ -26,7 +26,7 @@ volumeBar.style = .likeInstagram
 volumeBar.start()
 ```
 
-Customize appearance attributes (see [`VolumeBarStyle`](http://gizmosachin.github.io/VolumeBar/docs/Structs/VolumeBarStyle.html)):
+Customize appearance attributes (see [`VolumeBarStyle`](http://gizmosachin.github.io/VolumeBar/Structs/VolumeBarStyle.html)):
 ```swift
 let volumeBar = VolumeBar.shared
 let customStyle = VolumeBarStyle.likeInstagram
@@ -36,7 +36,7 @@ customStyle.backgroundColor = .black
 volumeBar.style = customStyle
 ```
 
-Or even use custom animations (see [`VolumeBarAnimation`](http://gizmosachin.github.io/VolumeBar/docs/Structs/VolumeBarAnimation.html)):
+Or even use custom animations (see [`VolumeBarAnimation`](http://gizmosachin.github.io/VolumeBar/Structs/VolumeBarAnimation.html)):
 ```swift
 let volumeBar = VolumeBar.shared
 let fadeInAnimation = VolumeBarAnimation({ (view, completion) in
@@ -59,7 +59,7 @@ try! AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient)
 
 ### VolumeBar
 
-VolumeBar is fully documented [here](http://gizmosachin.github.io/VolumeBar/docs).
+VolumeBar is fully documented [here](http://gizmosachin.github.io/VolumeBar/).
 
 ## Installation
 
