@@ -31,6 +31,7 @@ import AVFoundation
 
 internal final class SystemVolumeManager: NSObject {
 	fileprivate let observers: NSHashTable<SystemVolumeObserver>
+	fileprivate var isObservingSystemVolumeChanges: Bool = false
 	
 	internal override init() {
 		observers = NSHashTable<SystemVolumeObserver>.weakObjects()
@@ -62,13 +63,23 @@ internal extension SystemVolumeManager {
 			try! AVAudioSession.sharedInstance().setActive(true)
 		}
 		
-		// Observe system volume changes
-		AVAudioSession.sharedInstance().addObserver(self, forKeyPath: #keyPath(AVAudioSession.outputVolume), options: [.old, .new], context: nil)
+		if !isObservingSystemVolumeChanges {
+			// Observe system volume changes
+			AVAudioSession.sharedInstance().addObserver(self, forKeyPath: #keyPath(AVAudioSession.outputVolume), options: [.old, .new], context: nil)
+			
+			// We need to manually set this to avoid adding ourselves as an observer twice.
+			// This can happen if VolumeBar is started and the app has just launched.
+			// Without this, KVO retains us and we crash when system volume changes after stop() is called. :(
+			isObservingSystemVolumeChanges = true
+		}
 	}
 	
 	internal func stopObservingSystemVolumeChanges() {
 		// Stop observing system volume changes
-		AVAudioSession.sharedInstance().removeObserver(self, forKeyPath: #keyPath(AVAudioSession.outputVolume))
+		if isObservingSystemVolumeChanges {
+			AVAudioSession.sharedInstance().removeObserver(self, forKeyPath: #keyPath(AVAudioSession.outputVolume))
+			isObservingSystemVolumeChanges = false
+		}
 	}
 	
 	/// Observe changes in volume.
