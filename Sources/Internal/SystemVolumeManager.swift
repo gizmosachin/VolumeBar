@@ -59,7 +59,7 @@ internal final class SystemVolumeManager: NSObject {
 // System Volume Changes
 internal extension SystemVolumeManager {
 	internal func startObservingSystemVolumeChanges() {
-        try? AVAudioSession.sharedInstance().setActive(true)
+        	try? AVAudioSession.sharedInstance().setActive(true)
 		
 		if !isObservingSystemVolumeChanges {
 			// Observe system volume changes
