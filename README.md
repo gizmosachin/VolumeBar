@@ -69,7 +69,7 @@ VolumeBar is fully documented [here](http://gizmosachin.github.io/VolumeBar/).
 source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
-pod 'VolumeBar', '~> 3.0.2'
+pod 'VolumeBar', '~> 3.0.3'
 ```
 
 ### [Carthage](https://github.com/Carthage/Carthage)
