@@ -92,10 +92,15 @@ class ViewController: UIViewController, UIScrollViewDelegate {
 		super.viewWillAppear(animated)
 		
 		// Don't interrupt user audio
-		try! AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient)
+		try! AVAudioSession.sharedInstance().setCategory(.ambient, mode: .default, options: [])
 		
 		// Initial style
 		VolumeBar.shared.style = .likeInstagram
 		VolumeBar.shared.start()
 	}
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromAVAudioSessionCategory(_ input: AVAudioSession.Category) -> String {
+	return input.rawValue
 }

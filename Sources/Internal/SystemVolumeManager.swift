@@ -22,7 +22,7 @@
 //  SOFTWARE.
 //
 
-import Foundation
+import UIKit
 import AVFoundation
 
 @objc internal protocol SystemVolumeObserver {
@@ -93,14 +93,14 @@ internal extension SystemVolumeManager {
 internal extension SystemVolumeManager {
 	internal func startObservingApplicationStateChanges() {
 		// Add application state observers
-		NotificationCenter.default.addObserver(self, selector: #selector(SystemVolumeManager.applicationWillResignActive(notification:)), name: .UIApplicationWillResignActive, object: nil)
-		NotificationCenter.default.addObserver(self, selector: #selector(SystemVolumeManager.applicationDidBecomeActive(notification:)), name: .UIApplicationDidBecomeActive, object: nil)
+		NotificationCenter.default.addObserver(self, selector: #selector(SystemVolumeManager.applicationWillResignActive(notification:)), name: UIApplication.willResignActiveNotification, object: nil)
+		NotificationCenter.default.addObserver(self, selector: #selector(SystemVolumeManager.applicationDidBecomeActive(notification:)), name: UIApplication.didBecomeActiveNotification, object: nil)
 	}
 	
 	internal func stopObservingApplicationStateChanges() {
 		// Remove application state observers
-		NotificationCenter.default.removeObserver(self, name: .UIApplicationWillResignActive, object: nil)
-		NotificationCenter.default.removeObserver(self, name: .UIApplicationDidBecomeActive, object: nil)
+		NotificationCenter.default.removeObserver(self, name: UIApplication.willResignActiveNotification, object: nil)
+		NotificationCenter.default.removeObserver(self, name: UIApplication.didBecomeActiveNotification, object: nil)
 	}
 	
 	/// Observe when the application background state changes.

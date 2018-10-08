@@ -26,8 +26,8 @@ import UIKit
 import MediaPlayer
 
 internal final class VolumeBarWindow: UIWindow {
-	fileprivate static let hiddenWindowLevel = UIWindowLevelNormal
-	fileprivate static let visibleWindowLevel = UIWindowLevelStatusBar + 1
+	fileprivate static let hiddenWindowLevel = UIWindow.Level.normal
+	fileprivate static let visibleWindowLevel = UIWindow.Level.statusBar + 1
 	
 	internal let viewController: UIViewController
 	
