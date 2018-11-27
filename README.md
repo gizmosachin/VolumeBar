@@ -29,7 +29,7 @@ volumeBar.start()
 Customize appearance attributes (see [`VolumeBarStyle`](http://gizmosachin.github.io/VolumeBar/Structs/VolumeBarStyle.html)):
 ```swift
 let volumeBar = VolumeBar.shared
-let customStyle = VolumeBarStyle.likeInstagram
+var customStyle = VolumeBarStyle.likeInstagram
 customStyle.trackTintColor = .white
 customStyle.trackTintColor = .darkGray
 customStyle.backgroundColor = .black
