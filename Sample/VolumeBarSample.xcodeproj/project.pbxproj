@@ -149,13 +149,13 @@
 					03D35F3B1C8A2FD30053F91E = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 9BZNV2TE99;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
 			buildConfigurationList = 03D35F371C8A2FD30053F91E /* Build configuration list for PBXProject "VolumeBarSample" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -324,7 +324,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.SachinPatel.VolumeBar;
 				PRODUCT_NAME = VolumeBarSample;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -342,7 +342,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.SachinPatel.VolumeBar;
 				PRODUCT_NAME = VolumeBarSample;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

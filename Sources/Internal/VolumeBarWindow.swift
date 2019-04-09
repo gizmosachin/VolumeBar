@@ -62,7 +62,7 @@ internal final class VolumeBarWindow: UIWindow {
 }
 
 internal extension VolumeBarWindow {
-	internal func apply(style: VolumeBarStyle) {
+	func apply(style: VolumeBarStyle) {
 		// Round corners
 		viewController.view.layer.masksToBounds = true
 		viewController.view.layer.cornerRadius = style.cornerRadius
@@ -93,7 +93,7 @@ internal extension VolumeBarWindow {
 }
 
 internal extension VolumeBarWindow {
-	internal func show(withAnimation animation: VolumeBarAnimation) {
+	func show(withAnimation animation: VolumeBarAnimation) {
 		// Unhide the view so we can animate it
 		guard let view = viewController.view, view.isHidden else { return }
 		view.isHidden = false
@@ -106,7 +106,7 @@ internal extension VolumeBarWindow {
 		animation.animationBlock(self, completionHandler)
 	}
 	
-	internal func hide(withAnimation animation: VolumeBarAnimation) {
+	func hide(withAnimation animation: VolumeBarAnimation) {
 		// Hide the view and reset the window level once the hide animation completes
 		let completionHandler: VolumeBarAnimation.CompletionHandler? = { done in
 			self.viewController.view.isHidden = true
