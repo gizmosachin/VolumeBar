@@ -31,12 +31,12 @@ public extension VolumeBarStyle {
 	/// A volume bar style like Instagram, where the bar is a continuous progress view
 	/// that displays to the left of the notch on iPhone X and covers the full width
 	/// of the iOS status bar on all other iOS devices.
-	public static let likeInstagram: VolumeBarStyle = UIDevice.current.volumeBar_isiPhoneX ? .leftOfNotch : .fullWidthContinuous
+	static let likeInstagram: VolumeBarStyle = UIDevice.current.volumeBar_isiPhoneX ? .leftOfNotch : .fullWidthContinuous
 	
 	/// A volume bar style like Snapchat, where the bar is a segmented progress view
 	/// that displays under the notch and status bar on iPhone X (respecting the device's
 	/// safe area insets) and covers the iOS status bar on all other iOS devices.
-	public static let likeSnapchat: VolumeBarStyle = {
+	static let likeSnapchat: VolumeBarStyle = {
 		var style = VolumeBarStyle()
 		style.height = 5
 		style.respectsSafeAreaInsets = UIDevice.current.volumeBar_isiPhoneX
@@ -51,7 +51,7 @@ public extension VolumeBarStyle {
 	}()
 	
 	/// A volume bar style that displays a continuous progress view and has minimal insets.
-	public static let fullWidthContinuous: VolumeBarStyle = {
+	static let fullWidthContinuous: VolumeBarStyle = {
 		var style = VolumeBarStyle()
 		style.height = 5
 		style.cornerRadius = 3
@@ -64,7 +64,7 @@ public extension VolumeBarStyle {
 	}()
 	
 	/// A volume bar style that displays to the left of the notch on iPhone X.
-	public static let leftOfNotch: VolumeBarStyle = {
+	static let leftOfNotch: VolumeBarStyle = {
 		var style = VolumeBarStyle()
 		style.height = 5
 		style.cornerRadius = 3
@@ -77,7 +77,7 @@ public extension VolumeBarStyle {
 	}()
 	
 	/// A volume bar style that displays to the right of the notch on iPhone X.
-	public static let rightOfNotch: VolumeBarStyle = {
+	static let rightOfNotch: VolumeBarStyle = {
 		var style = VolumeBarStyle()
 		style.height = 5
 		style.cornerRadius = 3
@@ -92,7 +92,7 @@ public extension VolumeBarStyle {
 
 /// :nodoc:
 public extension UIDevice {
-	public var volumeBar_isiPhoneX: Bool {
+	var volumeBar_isiPhoneX: Bool {
 		#if arch(i386) || arch(x86_64)
 			// We're running on the simulator, so use that to get the simulated model identifier.
 			let identifier = ProcessInfo.processInfo.environment["SIMULATOR_MODEL_IDENTIFIER"]

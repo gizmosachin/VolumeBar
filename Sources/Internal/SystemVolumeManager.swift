@@ -58,7 +58,7 @@ internal final class SystemVolumeManager: NSObject {
 
 // System Volume Changes
 internal extension SystemVolumeManager {
-	internal func startObservingSystemVolumeChanges() {
+	func startObservingSystemVolumeChanges() {
         	try? AVAudioSession.sharedInstance().setActive(true)
 		
 		if !isObservingSystemVolumeChanges {
@@ -72,7 +72,7 @@ internal extension SystemVolumeManager {
 		}
 	}
 	
-	internal func stopObservingSystemVolumeChanges() {
+	func stopObservingSystemVolumeChanges() {
 		// Stop observing system volume changes
 		if isObservingSystemVolumeChanges {
 			AVAudioSession.sharedInstance().removeObserver(self, forKeyPath: #keyPath(AVAudioSession.outputVolume))
@@ -83,7 +83,7 @@ internal extension SystemVolumeManager {
 	/// Observe changes in volume.
 	///
 	/// This method is called when the user presses either of the volume buttons.
-	override internal func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey: Any]?, context: UnsafeMutableRawPointer?) {
+	override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey: Any]?, context: UnsafeMutableRawPointer?) {
 		let volume = AVAudioSession.sharedInstance().outputVolume
 		volumeChanged(to: volume)
 	}
@@ -91,25 +91,25 @@ internal extension SystemVolumeManager {
 
 // Application State Changes
 internal extension SystemVolumeManager {
-	internal func startObservingApplicationStateChanges() {
+	func startObservingApplicationStateChanges() {
 		// Add application state observers
 		NotificationCenter.default.addObserver(self, selector: #selector(SystemVolumeManager.applicationWillResignActive(notification:)), name: UIApplication.willResignActiveNotification, object: nil)
 		NotificationCenter.default.addObserver(self, selector: #selector(SystemVolumeManager.applicationDidBecomeActive(notification:)), name: UIApplication.didBecomeActiveNotification, object: nil)
 	}
 	
-	internal func stopObservingApplicationStateChanges() {
+	func stopObservingApplicationStateChanges() {
 		// Remove application state observers
 		NotificationCenter.default.removeObserver(self, name: UIApplication.willResignActiveNotification, object: nil)
 		NotificationCenter.default.removeObserver(self, name: UIApplication.didBecomeActiveNotification, object: nil)
 	}
 	
 	/// Observe when the application background state changes.
-	@objc internal func applicationWillResignActive(notification: Notification) {
+	@objc func applicationWillResignActive(notification: Notification) {
 		// Stop observing volume while in the background
 		stopObservingSystemVolumeChanges()
 	}
 	
-	@objc internal func applicationDidBecomeActive(notification: Notification) {
+	@objc func applicationDidBecomeActive(notification: Notification) {
 		// Restart session after becoming active
 		startObservingSystemVolumeChanges()
 	}

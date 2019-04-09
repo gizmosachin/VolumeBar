@@ -70,7 +70,7 @@ public extension VolumeBar {
 	// MARK: Lifecycle
 
 	/// Start VolumeBar and automatically show when the volume changes.
-	public func start() {
+	func start() {
 		// If we have a systemVolumeManager, we're already started.
 		guard systemVolumeManager == nil else { return }
 		
@@ -94,7 +94,7 @@ public extension VolumeBar {
 	}
 	
 	/// Stop VolumeBar from automatically showing when the volume changes.
-	public func stop() {
+	func stop() {
 		hide()
 		window = nil
 		systemVolumeManager = nil
@@ -105,7 +105,7 @@ public extension VolumeBar {
 	// MARK: Presentation
 
 	/// Show VolumeBar immediately using the current `showAnimation`.
-	public func show() {
+	func show() {
 		// Invalidate the timer and extend the on-screen duration
 		timer?.invalidate()
 		timer = Timer.scheduledTimer(timeInterval: minimumVisibleDuration, target: self, selector: #selector(VolumeBar.hide), userInfo: nil, repeats: false)
@@ -114,7 +114,7 @@ public extension VolumeBar {
 	}
 	
 	/// Show VolumeBar immediately using the current `hideAnimation`.
-	@objc public func hide() {
+	@objc func hide() {
 		window?.hide(withAnimation: hideAnimation)
 	}
 }

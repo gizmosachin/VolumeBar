@@ -4,7 +4,7 @@
 
 VolumeBar is a [Swift](https://developer.apple.com/swift/) volume indicator that doesn't obstruct content on screen.
 
-[![Build Status](https://travis-ci.org/gizmosachin/VolumeBar.svg?branch=master)](https://travis-ci.org/gizmosachin/VolumeBar) ![Pod Version](https://img.shields.io/cocoapods/v/VolumeBar.svg) [![Swift Version](https://img.shields.io/badge/language-swift%204.0-brightgreen.svg)](https://developer.apple.com/swift) [![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](LICENSE)
+[![Build Status](https://travis-ci.org/gizmosachin/VolumeBar.svg?branch=master)](https://travis-ci.org/gizmosachin/VolumeBar) ![Pod Version](https://img.shields.io/cocoapods/v/VolumeBar.svg) [![Swift Version](https://img.shields.io/badge/language-swift%205.0-brightgreen.svg)](https://developer.apple.com/swift) [![GitHub license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](LICENSE)
 
 |              | Features                                 |
 | :----------: | :--------------------------------------- |
@@ -12,8 +12,8 @@ VolumeBar is a [Swift](https://developer.apple.com/swift/) volume indicator that
 |    :art:     | Customizable appearance with presets     |
 |    :boom:    | Support for custom animations            |
 |   :iphone:   | Works with iPhone X                      |
-|   :books:    | Fully [documented](http://gizmosachin.github.io/VolumeBar) |
-| :baby_chick: | [Swift 4](https://developer.apple.com/swift/) |
+|   :books:    | Fully [documented](https://gizmosachin.github.io/VolumeBar) |
+| :baby_chick: | [Swift 5](https://developer.apple.com/swift/) |
 
 
 ## Usage
@@ -26,7 +26,7 @@ volumeBar.style = .likeInstagram
 volumeBar.start()
 ```
 
-Customize appearance attributes (see [`VolumeBarStyle`](http://gizmosachin.github.io/VolumeBar/Structs/VolumeBarStyle.html)):
+Customize appearance attributes (see [`VolumeBarStyle`](https://gizmosachin.github.io/VolumeBar/Structs/VolumeBarStyle.html)):
 ```swift
 let volumeBar = VolumeBar.shared
 var customStyle = VolumeBarStyle.likeInstagram
@@ -36,7 +36,7 @@ customStyle.backgroundColor = .black
 volumeBar.style = customStyle
 ```
 
-Or even use custom animations (see [`VolumeBarAnimation`](http://gizmosachin.github.io/VolumeBar/Structs/VolumeBarAnimation.html)):
+Or even use custom animations (see [`VolumeBarAnimation`](https://gizmosachin.github.io/VolumeBar/Structs/VolumeBarAnimation.html)):
 ```swift
 let volumeBar = VolumeBar.shared
 let fadeInAnimation = VolumeBarAnimation({ (view, completion) in
@@ -59,17 +59,17 @@ try! AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient)
 
 ### VolumeBar
 
-VolumeBar is fully documented [here](http://gizmosachin.github.io/VolumeBar/).
+VolumeBar is fully documented [here](https://gizmosachin.github.io/VolumeBar/).
 
 ## Installation
 
-### [CocoaPods](http://cocoapods.org/)
+### [CocoaPods](https://cocoapods.org/)
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
-pod 'VolumeBar', '~> 3.0.4'
+pod 'VolumeBar', '~> 3.1'
 ```
 
 ### [Carthage](https://github.com/Carthage/Carthage)
