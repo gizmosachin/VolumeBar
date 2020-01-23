@@ -1,3 +1,7 @@
+## Deprecated
+
+VolumeBar is now deprecated. iOS [now includes](https://www.macrumors.com/2019/06/03/apple-ios-13-volume-indicator/) a non-intrusive volume indicator, so apps should stop using VolumeBar.
+
 ![VolumeBar](https://github.com/gizmosachin/VolumeBar/raw/master/VolumeBar.gif)
 
 ## VolumeBar
